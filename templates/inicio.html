@@ -1,0 +1,16 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<h2>BIEN VENIDOS A UruVene "UN ESPACIO PARA LOS INMIGRANTES"  </h2>  
+
+{%for p in inicio %} 
+<div class="my-4 py-4 border-bottom">
+
+    <h2> {{p.title}} </h2>
+    <p> {{p.text}} </p>
+    <a href="/mision/{{p.id}}"> Editar </a>
+</div>
+{% endfor %}
+
+{% endblock %}

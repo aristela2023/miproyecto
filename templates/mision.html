@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<h1> Publicaciones </h1>
+
+<form method="POST" action="">
+    {% csrf_token %}
+
+
+
+
+
+    <div class="form-group my-3">
+        <label> Titulo </label>
+        <input type="text" class="form-control" name="title" placeholder="titulo"
+        {% if mision is not None %}
+            value="{{mision.title}}"
+        {% endif %}
+        >
+    </div>
+
+    <div class="form-group my-3">
+        <label> Texto </label>
+        <textarea class="form-control" name="text">{% if mision is not None %}{{mision.text}}{% endif %}</textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit"> Enviar </button>
+</form>
+
+{% endblock %}
