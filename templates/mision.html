@@ -1,15 +1,16 @@
 {% extends "layouts/main.html" %}
 
 {% block content %}
-
 <h1> Publicaciones </h1>
 
 <form method="POST" action="">
+ 
     {% csrf_token %}
+# // ojo aqui es donde deberia validar el llamado para modificar, ver el video en el minuto 8:06 al 12
 
-
-
-
+    {% if mision is not None %}
+         <input type="posts" value="{mision.id}" name= "id"> 
+    {% endif %}
 
     <div class="form-group my-3">
         <label> Titulo </label>

@@ -4,6 +4,14 @@
 
 <h2>"Eventos del Mes en UruVene"  </h2>  
 
+{%for p in ejemplo %} 
+<div class="my-4 py-4 border-bottom">
 
+    <h2> {{p.title}} </h2>
+    <p>  {{p.text}} </p>
+            # #  <p>  {{p.id}} </p>
+    <a href="/mision/{{p.id}}"> Editar </a>
+</div>
+{% endfor %}
 
 {% endblock %}
